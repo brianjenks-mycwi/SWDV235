@@ -1,0 +1,248 @@
+/* Give the background a little shading */
+body {
+	background-color: rgba(0,50,130,1);
+}
+
+/* Move the hamburger button further to the left in mobile */
+.navbar-toggle {
+	margin-right: 1.5em;
+}
+
+nav {
+	position: relative;
+	box-shadow: .5em .5em rgba(40,40,40,.8);
+}
+
+main, footer {
+	background: linear-gradient(to bottom right, rgba(255,255,255,1), rgba(255,255,255,.9), rgba(255,255,255,.5));
+	text-shadow: 0 0 5px white; /* Make text near to the right legible */
+}
+
+/* Modified to fit with the bootstrap navigation */
+main {
+	width: 95%;
+	margin: -.5em auto 0 auto;
+	padding: 0;
+}
+
+.calculator main {
+	text-align: center;
+}
+
+/* Format for branding */
+main, #main-container, footer, article, img:not(.brand) {
+	border-radius: 1em;
+}
+
+/* Format these items with a neat shadow, branding */
+#main-container, footer, article, img:not(.brand) {
+	box-shadow: .5em .5em rgba(40,40,40,.8);
+}
+
+/* Pad the container. Using this rather than main for desktop reasons */
+#main-container {
+	margin: 0;
+	padding: .5em 1em 2em 1em;
+}
+
+/* Style headers the same, give a shadow and bold with a little bit of margin */
+h1, h2, h3, h4, h5 {
+	text-shadow: .1em .1em rgba(0,0,0,.1);
+	font-weight: bold;
+	margin: .5em .2em .2em .2em;
+}
+
+/* Make font larger, better to read */
+h1 {
+	font-size: 1.5em;
+}
+
+h2 {
+	font-size: 1.2em;
+}
+
+/* Style the calculator to give it depth and proper spacing */
+#calculator {
+	display: inline-block;
+	text-align: left;
+	border: 1px solid black;
+	border-radius: 1em;
+	padding: 1em;
+	background: linear-gradient(to bottom right, rgba(255,255,255,1), rgba(255,255,255,1), rgba(150,150,150,1));
+}
+
+/* Space the buttons on the calculator apart from each other, rounded button corners */
+#calculator input[type="button"] {
+	margin-top: .5em;
+	border-radius: .5em;
+}
+
+/* Move starting buttons to the right */
+input[type="button"].push-right {
+	margin-left: .5em;
+}
+
+/* Hold items */
+.container-test-calc {
+	display: inline-block;
+	border: 1px solid black;
+	border-radius: 1em;
+	padding: 1em;
+	margin-top: 1em;
+}
+
+/* Space our form items out from each other */
+button, label {
+	margin-top: .5em;
+}
+
+/* Our inputs (text boxes) should be only 5ems wide */
+.test-calc input {
+	width: 5em;
+}
+
+/* Make the footer smaller and centered */
+footer {
+	width: 40%;
+	margin: 1em auto;
+	padding: .3em 1em;
+	text-align: center;
+}
+
+.align-right {
+	text-align: right;
+}
+
+/* Change brand picture size to smaller, and give it proper spacing on
+ * the nav bar */
+.brand {
+	margin: -10px 0 0 5px;
+	width: 50px;
+}
+
+.hiding {
+	display: none;
+}
+
+/* Space the labels */
+#contact > label {
+	margin: .7em 0 0 1em;
+}
+
+/* Have these on their own lines*/
+#contact > label, #contact > textarea {
+    display: block;
+}
+
+/* These should be able to have the spans beside them */
+#contact > input, #contact > select {
+    display: inline-block;
+}
+
+/* Style contact elements, avoid elements outside the form  */
+#contact > input, #contact > select,
+#contact > textarea {
+	margin-left: 1em;
+}
+
+/* Added to make span text red */
+#contact > span {
+    color: red;
+}
+
+/* Style buttons only inside the form*/
+#contact > input[type="button"] {
+	margin-top: .5em;
+}
+
+/* Stay inside the container */
+textarea {
+	max-width: 95%;
+}
+
+/* Have the size of our image fit */
+main img {
+	max-width: 25vw;
+}
+
+/* Send the image to the right */
+figure {
+	float: right;
+}
+
+#imageList {
+    display: none;
+}
+
+/* Add a border and don't allow things to overflow */
+article {
+    background-color: rgba(255,255,255,.5);
+    border: 1px solid black;
+    overflow: auto;
+}
+
+article h1 {
+    text-decoration: underline;
+}
+
+/* Center anything with this class */
+.center {
+    text-align: center;
+}
+
+#carousel {
+    text-align: center;
+    float: left;
+    margin-right: 1em;
+}
+
+/* Give the carousel great spacing for its inner elements */
+#carousel > p, #carousel > h2 {
+    margin: .5em;
+}
+
+#carousel img {
+    max-width: 200px;
+}
+
+/********************** media query Desktop ****************************/
+@media (min-width: 768px) {
+	
+	/* Have the image move to be centered on nav */
+	.brand {
+		margin: -15px 0 0 0;	
+	}
+	
+	/* Change gradient to left-right */
+	main {
+		background: linear-gradient(to bottom right, rgba(255,255,255,1), rgba(255,255,255,.9),
+			rgba(255,255,255,.8), rgba(255,255,255,.7), rgba(255,255,255,.01));
+		width: 80%;
+	}
+	
+	/* This property holds everything inside main. It is used to properly transition
+	 * the gradient background. */
+	#main-container {
+		margin: 0;
+		padding: .5em 5em 2em 1em;
+		background: rgba(255,255,255,0);
+	}
+
+	/* For pages that want to fade...*/
+	#main-container.background-fade {
+		-webkit-transition: transform 1s,
+				background-color 1s, ease-in 1s;
+		transition: transform 1s,
+				background-color 1s, ease-in 1s;
+	}
+	
+	/* Have main transition to a white background */
+	#main-container.background-fade:hover {
+		background: rgba(255,255,255,1);
+	}
+	
+	/* Pull our image to the right */
+	main figure img {
+		margin-right: -4em;
+	}
+}

@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Math - FAQ</title>
+	<meta CHARSET="utf-8">
+	<!-- Minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<!-- Personalized styles -->
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/styles.css">
+	
+	<!-- Personalized JavaScript -->
+	<script src="js/faq.js"></script>
+	<!-- See footer for one more reference -->
+	
+</head>
+
+<body class="index">
+	<header>
+		
+	</header>
+	
+	<div class="container">
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<ul class="nav navbar-nav">
+					<li><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button></li>
+					<li><a class="navbar-brand" href="index.html"><img class="brand" src="images/calculator.png" alt="calculator brand"></a></li>
+				</ul>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="calculator.html">Calculator</a></li>
+					<li class="active"><a href="faq.html">FAQ</a></li>
+					<li><a href="newsletter.aspx">Newsletter</a></li>
+					<li><a href="contact.aspx">Contact</a></li>
+                    <li><a href="classes.html">Classes</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+    </div>
+	
+	<main>
+	<div id="main-container" class="background-fade">
+		<!-- h2 elements are enclosed in a link to show they are clickable -->
+		<a href="#"><h2 onclick="toggleMe(1);"><span class="math1">+</span> Where is math used? <span class="math1">+</span></h2></a>
+			<p id="math1" class="hiding">Math is used in many different sciences!</p>
+			
+		<a href="#"><h2 onclick="toggleMe(2);"><span class="math2">+</span> Why should I learn at least a little math? <span class="math2">+</span></h2></a>
+			<p id="math2" class="hiding">You need to be able to keep at least a little track on your finances.</p>
+			
+		<a href="#" ><h2 onclick="toggleMe(3);"><span class="math3">+</span> How far should I go for a field in X? <span class="math3">+</span></h2></a>
+			<p id="math3" class="hiding">Most science fields require knowledge in statistics.</p>
+	</div>
+	</main>
+	
+	<footer>
+		<script src="js/date.js"></script>
+		<noscript><p>Current year: 2018</p></noscript>
+		<p>Created by: Brian Jenks</p>
+	</footer>
+
+</body>
+</html>
