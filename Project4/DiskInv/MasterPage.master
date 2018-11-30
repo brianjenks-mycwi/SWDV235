@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<%--
+*************************
+*CHANGE DATE        USER            DETAILS
+*--------------------------------------------
+*   11/9/2018      BRIAN JENKS     First instantiation
+*   11/16/2018      BRIAN JENKS     Changed navigation names to be in line with actual functions
+*************************
+--%>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Disk Inventory</title>
+    <!-- Minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/styles.css" />
+	
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<ul class="nav navbar-nav">
+					<li><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button></li>
+					<li><a class="navbar-brand" href="default.aspx"><img class="brand" src="images/cd.png" alt="calculator brand" /></a></li>
+				</ul>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li><a href="Default.aspx">Home</a></li>
+					<li><a href="Borrower.aspx">Manage Borrowers</a></li>
+					<li><a href="Disk.aspx">Manage Disks</a></li>
+					<li><a href="Artist.aspx">Manage Artists</a></li>
+                    <li><a href="CheckOut.aspx">Check Out Items</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+    <form id="form1" runat="server">
+    <main>
+        <asp:ContentPlaceHolder id="mainContent" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </main>
+    </form>
+    <footer>
+        <span class="copyright">&copy;</span> <asp:Label ID="lblYear" runat="server" Text="Label"></asp:Label>
+    </footer>
+</body>
+</html>

@@ -66,6 +66,8 @@
                         <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("PhoneNumber") %>'></asp:TextBox>
                         <asp:RequiredFieldValidator ID="rfvPhoneNumber" runat="server" ErrorMessage="Phone Number is a required field" Text="*"
                             ControlToValidate="TextBox3" CssClass="text-danger" ValidationGroup="InsertBorrower"></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="revPhoneNumber" runat="server" ErrorMessage="Phone number must be in this format: 5555555555"
+                            Text="*" ControlToValidate="TextBox3" ValidationExpression="\d{10}" ValidationGroup="InsertBorrower" CssClass="text-danger"></asp:RegularExpressionValidator>
                     </InsertItemTemplate>
                     
                 </asp:TemplateField>
